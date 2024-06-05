@@ -55,6 +55,6 @@
     {title}
   </button>
 </h2>
-<div class="usa-accordion__content usa-prose" id="{id}" hidden="{!expanded}">
+<div class="usa-accordion__content usa-prose" {id} hidden="{!expanded}">
   <slot />
 </div>

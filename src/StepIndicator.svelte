@@ -25,7 +25,7 @@
   const steps = writable([]);
   const currentStep = derived(steps, (_) => _.find(({ current }) => current));
   const currentStepIndex = derived(steps, (_) =>
-    _.findIndex(({ current }) => current)
+    _.findIndex(({ current }) => current),
   );
 
   setContext("StepIndicator", {
@@ -55,14 +55,16 @@
     <h2 class="usa-step-indicator__heading">
       <span class="usa-step-indicator__heading-counter">
         <span class="usa-sr-only">Step</span>
-        <span
-          class="usa-step-indicator__current-step"
-        >{$currentStepIndex + 1}</span>
+        <span class="usa-step-indicator__current-step"
+          >{$currentStepIndex + 1}</span
+        >
         <span class="usa-step-indicator__total-steps">of {$steps.length}</span>
       </span>
-      <span class="usa-step-indicator__heading-text">{#if $currentStep}
+      <span class="usa-step-indicator__heading-text"
+        >{#if $currentStep}
           {$currentStep.text}
-        {/if}</span>
+        {/if}</span
+      >
     </h2>
   </div>
 </div>

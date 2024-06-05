@@ -56,20 +56,18 @@
       {label}
       {#if !required}<span class="usa-hint">(optional)</span>{/if}
     </label>
-    <span
-      class="usa-error-message"
-      id="error-{id}"
-      role="alert"
-    >{errorText}</span>
+    <span class="usa-error-message" id="error-{id}" role="alert"
+      >{errorText}</span
+    >
     <textarea
       class="usa-textarea usa-input--error"
       type="text"
-      id="{id}"
-      name="{name}"
-      disabled="{disabled}"
-      value="{value}"
-      readonly="{readonly}"
-      required="{required}"
+      {id}
+      {name}
+      {disabled}
+      {value}
+      {readonly}
+      {required}
       aria-required="{required}"
       on:focus
       on:blur
@@ -88,12 +86,12 @@
     class="usa-textarea"
     class:usa-input--success="{success}"
     type="text"
-    id="{id}"
-    name="{name}"
-    disabled="{disabled}"
-    value="{value}"
-    readonly="{readonly}"
-    required="{required}"
+    {id}
+    {name}
+    {disabled}
+    {value}
+    {readonly}
+    {required}
     aria-required="{required}"
     on:focus
     on:blur

@@ -18,7 +18,7 @@
 <li class="usa-sidenav__item">
   <a
     {...$$restProps}
-    href="{href}"
+    {href}
     on:click
     class:usa-current="{current}"
     aria-current="{current ? 'page' : undefined}"

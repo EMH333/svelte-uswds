@@ -57,9 +57,9 @@
   <input
     class="usa-checkbox__input"
     type="checkbox"
-    id="{id}"
-    name="{name}"
-    disabled="{disabled}"
+    {id}
+    {name}
+    {disabled}
     bind:checked
     bind:value
     on:focus

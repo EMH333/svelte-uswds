@@ -71,7 +71,7 @@
       prevValue = value;
 
       const selected = Object.values($items).filter(
-        (_) => _.value === value
+        (_) => _.value === value,
       )[0];
 
       if (selected !== undefined) updateValues(selected);
@@ -97,7 +97,7 @@
   });
 </script>
 
-<fieldset class="usa-fieldset" disabled="{disabled}">
+<fieldset class="usa-fieldset" {disabled}>
   <legend class="usa-sr-only">{legend}</legend>
   <slot />
 </fieldset>

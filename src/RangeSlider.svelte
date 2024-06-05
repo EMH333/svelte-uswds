@@ -66,23 +66,21 @@
       {label}
       {#if !required}<span class="usa-hint">(optional)</span>{/if}
     </label>
-    <span
-      class="usa-error-message"
-      id="error-${id}"
-      role="alert"
-    >{errorText}</span>
+    <span class="usa-error-message" id="error-${id}" role="alert"
+      >{errorText}</span
+    >
     <input
       class="usa-range usa-input--error"
       type="range"
-      id="{id}"
-      disabled="{disabled}"
-      readonly="{readonly}"
-      required="{required}"
+      {id}
+      {disabled}
+      {readonly}
+      {required}
       aria-required="{required}"
-      min="{min}"
-      max="{max}"
-      step="{step}"
-      value="{value}"
+      {min}
+      {max}
+      {step}
+      {value}
       on:focus
       on:blur
       on:change
@@ -94,15 +92,15 @@
     class="usa-range"
     class:usa-input--success="{success}"
     type="range"
-    id="{id}"
-    disabled="{disabled}"
-    readonly="{readonly}"
-    required="{required}"
+    {id}
+    {disabled}
+    {readonly}
+    {required}
     aria-required="{required}"
-    min="{min}"
-    max="{max}"
-    step="{step}"
-    value="{value}"
+    {min}
+    {max}
+    {step}
+    {value}
     on:focus
     on:blur
     on:change

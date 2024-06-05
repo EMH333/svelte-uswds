@@ -95,28 +95,26 @@
       {label}
       {#if !required}<span class="usa-hint">(optional)</span>{/if}
     </label>
-    <span
-      class="usa-error-message"
-      id="error-{id}"
-      role="alert"
-    >{errorText}</span>
+    <span class="usa-error-message" id="error-{id}" role="alert"
+      >{errorText}</span
+    >
     <input
       class="usa-input usa-input--error"
       class:usa-input--small="{size === 'small'}"
       class:usa-input--medium="{size === 'medium'}"
       aria-describedby="error-{id}"
-      id="{id}"
-      autocapitalize="{autocapitalize}"
-      autocomplete="{autocomplete}"
-      autocorrect="{autocorrect}"
-      spellcheck="{spellcheck}"
-      name="{name}"
-      disabled="{disabled}"
-      pattern="{pattern}"
-      type="{type}"
-      value="{value}"
-      readonly="{readonly}"
-      required="{required}"
+      {id}
+      {autocapitalize}
+      {autocomplete}
+      {autocorrect}
+      {spellcheck}
+      {name}
+      {disabled}
+      {pattern}
+      {type}
+      {value}
+      {readonly}
+      {required}
       aria-required="{required}"
       on:focus
       on:blur
@@ -136,18 +134,18 @@
     class:usa-input--small="{size === 'small'}"
     class:usa-input--medium="{size === 'medium'}"
     class:usa-input--success="{success}"
-    id="{id}"
-    autocapitalize="{autocapitalize}"
-    autocomplete="{autocomplete}"
-    autocorrect="{autocorrect}"
-    spellcheck="{spellcheck}"
-    name="{name}"
-    disabled="{disabled}"
-    pattern="{pattern}"
-    type="{type}"
-    value="{value}"
-    readonly="{readonly}"
-    required="{required}"
+    {id}
+    {autocapitalize}
+    {autocomplete}
+    {autocorrect}
+    {spellcheck}
+    {name}
+    {disabled}
+    {pattern}
+    {type}
+    {value}
+    {readonly}
+    {required}
     aria-required="{required}"
     on:focus
     on:blur

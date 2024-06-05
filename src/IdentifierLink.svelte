@@ -6,12 +6,7 @@
 </script>
 
 <li class="usa-identifier__required-links-item">
-  <a
-    {...$$restProps}
-    href="{href}"
-    class="usa-identifier__required-link"
-    on:click
-  >
+  <a {...$$restProps} {href} class="usa-identifier__required-link" on:click>
     <slot />
   </a>
 </li>

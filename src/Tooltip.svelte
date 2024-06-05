@@ -60,8 +60,8 @@
     on:focus="{show}"
     on:blur="{hide}"
     on:mouseover="{show}"
-    on:mouseout="{hide}"
-  ><slot /></button>
+    on:mouseout="{hide}"><slot /></button
+  >
   <span
     bind:this="{refTooltip}"
     role="tooltip"
@@ -69,8 +69,10 @@
     class="usa-tooltip__body--{position}"
     class:is-visible="{showTooltip}"
     class:is-set="{showTooltip}"
-    id="{id}"
+    {id}
     aria-hidden="{!showTooltip}"
-    style="margin-left: {margin.left}px; margin-bottom: {margin.bottom}px; {!vertical ? `margin-top: ${margin.top}px;` : ''} {vertical ? 'top: -1px; bottom: -1px;' : ''}"
-  >{tooltipText}</span>
+    style="margin-left: {margin.left}px; margin-bottom: {margin.bottom}px; {!vertical
+      ? `margin-top: ${margin.top}px;`
+      : ''} {vertical ? 'top: -1px; bottom: -1px;' : ''}">{tooltipText}</span
+  >
 </span>

@@ -30,7 +30,7 @@
   class:usa-button--inverse="{kind === 'outline-inverse'}"
   class:usa-button--big="{big}"
   class:usa-button--unstyled="{unstyled}"
-  disabled="{disabled}"
+  {disabled}
   on:click
 >
   <slot />

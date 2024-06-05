@@ -51,7 +51,7 @@
       </div>
     </header>
     <div
-      id="{id}"
+      {id}
       class="usa-banner__content usa-accordion__content"
       hidden="{!expanded}"
     >

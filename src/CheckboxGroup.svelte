@@ -89,11 +89,6 @@
   });
 </script>
 
-<Fieldset
-  class="usa-fieldset"
-  legend="{legend}"
-  disabled="{disabled}"
-  hideLegend
->
+<Fieldset class="usa-fieldset" {legend} {disabled} hideLegend>
   <slot />
 </Fieldset>

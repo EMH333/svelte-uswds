@@ -32,14 +32,12 @@
   <th {...$$restProps} on:click scope="col" class:text-tabular="{tabular}">
     <slot />
   </th>
+{:else if firstTd}
+  <th {...$$restProps} on:click scope="row" class:text-tabular="{tabular}">
+    <slot />
+  </th>
 {:else}
-  {#if firstTd}
-    <th {...$$restProps} on:click scope="row" class:text-tabular="{tabular}">
-      <slot />
-    </th>
-  {:else}
-    <td {...$$restProps} on:click class:text-tabular="{tabular}">
-      <slot />
-    </td>
-  {/if}
+  <td {...$$restProps} on:click class:text-tabular="{tabular}">
+    <slot />
+  </td>
 {/if}

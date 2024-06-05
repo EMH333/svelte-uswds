@@ -35,7 +35,7 @@
   class:usa-alert--error="{kind === 'error'}"
   class:usa-alert--info="{kind === 'info' || kind === 'validation'}"
   class:usa-alert--validation="{kind === 'validation'}"
-  role="{role}"
+  {role}
 >
   <div class="usa-alert__body">
     {#if title && !slim}

@@ -54,7 +54,7 @@
 </script>
 
 <legend class="usa-legend">{legend}</legend>
-<span class="usa-hint" id="{id}">{hint}</span>
+<span class="usa-hint" {id}>{hint}</span>
 <div class="usa-memorable-date">
   <div class="usa-form-group usa-form-group--month">
     <label class="usa-label" for="month-{id}">Month</label>

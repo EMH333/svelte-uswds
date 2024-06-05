@@ -42,7 +42,9 @@
   <span class="usa-step-indicator__segment-label">
     {text}
     {#if !current}
-      <span class="usa-sr-only">{#if !complete}not{' '}{/if}completed</span>
+      <span class="usa-sr-only"
+        >{#if !complete}not{" "}{/if}completed</span
+      >
     {/if}
   </span>
 </li>

@@ -59,11 +59,11 @@
   <input
     class="usa-radio__input"
     type="radio"
-    id="{id}"
-    checked="{checked}"
-    name="{name}"
-    disabled="{disabled}"
-    value="{value}"
+    {id}
+    {checked}
+    {name}
+    {disabled}
+    {value}
     on:focus
     on:blur
     on:change

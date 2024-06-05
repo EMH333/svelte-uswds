@@ -13,7 +13,7 @@
     .filter(Boolean)
     .join(' ')}"
 >
-  <a href="{href}" on:click>
+  <a {href} on:click>
     <slot>Return to top</slot>
   </a>
 </Grid>

@@ -61,18 +61,16 @@
       {label}
       {#if !required}<span class="usa-hint">(optional)</span>{/if}
     </label>
-    <span
-      class="usa-error-message"
-      id="error-{id}"
-      role="alert"
-    >{errorText}</span>
+    <span class="usa-error-message" id="error-{id}" role="alert"
+      >{errorText}</span
+    >
     <!-- svelte-ignore a11y-no-onchange -->
     <select
       class="usa-select usa-input--error"
-      name="{name}"
-      disabled="{disabled}"
-      id="{id}"
-      readonly="{readonly}"
+      {name}
+      {disabled}
+      {id}
+      {readonly}
       on:change
       on:change="{({ target }) => {
         selected = target.value;
@@ -94,10 +92,10 @@
   <select
     class="usa-select"
     class:usa-input--success="{success}"
-    name="{name}"
-    disabled="{disabled}"
-    id="{id}"
-    readonly="{readonly}"
+    {name}
+    {disabled}
+    {id}
+    {readonly}
     on:change
     on:change="{({ target }) => {
       selected = target.value;

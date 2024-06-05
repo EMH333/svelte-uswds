@@ -36,33 +36,29 @@
 </script>
 
 <div class="usa-form-group" class:usa-form-group--error="{error}">
-  <label
-    class="usa-label"
-    class:usa-label--error="{error}"
-    for="{id}"
-  >{label}</label>
+  <label class="usa-label" class:usa-label--error="{error}" for="{id}"
+    >{label}</label
+  >
   {#if hint}<span class="usa-hint" id="{id}-hint">{hint}</span>{/if}
   {#if error}
-    <span
-      class="usa-error-message"
-      id="{id}-alert"
-      role="alert"
-    >{errorText}</span>
+    <span class="usa-error-message" id="{id}-alert" role="alert"
+      >{errorText}</span
+    >
   {/if}
   <div class="usa-file-input">
     <div class="usa-file-input__target">
       <div class="usa-file-input__instructions" aria-hidden="true">
         <span class="usa-file-input__drag-text">Drag file here or </span><span
-          class="usa-file-input__choose"
-        >choose from folder</span>
+          class="usa-file-input__choose">choose from folder</span
+        >
       </div>
       <div class="usa-file-input__box"></div>
       <input
-        id="{id}"
+        {id}
         class:usa-file-input__input="{true}"
         name="{id}"
-        multiple="{multiple}"
-        disabled="{disabled}"
+        {multiple}
+        {disabled}
         {...$$restProps}
         on:focus
         on:blur

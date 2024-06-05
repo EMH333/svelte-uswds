@@ -41,23 +41,6 @@
   }
 </script>
 
-<style>
-  @media (min-width: 64em) {
-    :global(div[slot="nav-secondary"]) {
-      margin-left: 1rem;
-    }
-  }
-
-  :global(div[slot="navbar"]) ~ .usa-menu-btn {
-    margin-left: auto;
-  }
-
-  .usa-nav__close {
-    height: 3rem;
-    width: 3rem;
-  }
-</style>
-
 <svelte:window
   on:resize="{() => {
     debounce(() => {
@@ -154,3 +137,20 @@
     <slot name="nav-secondary" />
   {/if}
 </nav>
+
+<style>
+  @media (min-width: 64em) {
+    :global(div[slot="nav-secondary"]) {
+      margin-left: 1rem;
+    }
+  }
+
+  :global(div[slot="navbar"]) ~ .usa-menu-btn {
+    margin-left: auto;
+  }
+
+  .usa-nav__close {
+    height: 3rem;
+    width: 3rem;
+  }
+</style>

@@ -45,7 +45,8 @@
     if (expanded && ref && !ref.contains(target)) {
       expanded = false;
     }
-  }}" />
+  }}"
+/>
 
 {#if secondary}
   <ul {...$$restProps} class:usa-nav__secondary-links="{true}">
@@ -66,7 +67,7 @@
       <span>{buttonText}</span>
     </button>
     <ul
-      id="{id}"
+      {id}
       class="usa-nav__submenu"
       class:usa-megamenu="{mega}"
       hidden="{!expanded}"

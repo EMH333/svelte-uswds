@@ -18,7 +18,7 @@
 
 {#if secondary}
   <li {...$$restProps} class:usa-footer__secondary-link="{true}">
-    <a href="{href}">
+    <a {href}>
       <slot />
     </a>
   </li>
@@ -29,7 +29,7 @@
     class:desktop:grid-col-auto="{true}"
     class:usa-footer__primary-content="{true}"
   >
-    <a class:usa-footer__primary-link="{true}" href="{href}">
+    <a class:usa-footer__primary-link="{true}" {href}>
       <slot />
     </a>
   </li>

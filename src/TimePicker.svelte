@@ -16,7 +16,7 @@
     <div class="usa-hint" id="{id}-hint">hh:mm</div>
     <input
       class:usa-input="{true}"
-      id="{id}"
+      {id}
       name="{id}"
       type="text"
       aria-describedby="{id}-label {id}-hint"

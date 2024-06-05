@@ -30,7 +30,7 @@
 </script>
 
 {#if ctx && secondary}
-  <a {...$$restProps} href="{href}" class:usa-nav__secondary-item="{true}">
+  <a {...$$restProps} {href} class:usa-nav__secondary-item="{true}">
     <slot />
   </a>
 {:else}
@@ -40,7 +40,7 @@
     class:usa-nav__primary-item="{ctx === undefined}"
   >
     <a
-      href="{href}"
+      {href}
       class:usa-nav__link="{ctx === undefined}"
       class:usa-current="{ctx === undefined && current}"
     >

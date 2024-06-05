@@ -24,9 +24,9 @@
 
 <TextInput
   {...$$restProps}
-  autocomplete="{autocomplete}"
-  label="{label}"
-  type="{type}"
+  {autocomplete}
+  {label}
+  {type}
   required
   on:focus
   on:blur
