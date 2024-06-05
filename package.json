@@ -10,7 +10,9 @@
   "types": "./types/index.d.ts",
   "sideEffects": false,
   "scripts": {
-    "prepack": "prettier --write 'src/*.svelte' && rollup -c"
+    "prepack": "prettier --write 'src/*.svelte' && rollup -c",
+    "lint": "prettier 'src/*.svelte",
+    "build": "rollup -c"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^10.0.0",
