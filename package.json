@@ -11,7 +11,7 @@
   "sideEffects": false,
   "scripts": {
     "prepack": "prettier --write 'src/*.svelte' && rollup -c",
-    "lint": "prettier 'src/*.svelte",
+    "lint": "prettier --check --cache 'src/*.svelte'",
     "build": "rollup -c"
   },
   "devDependencies": {
