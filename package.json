@@ -8,6 +8,11 @@
   "main": "./lib/index.js",
   "module": "./lib/index.mjs",
   "types": "./types/index.d.ts",
+  "exports": {
+    ".": {
+      "svelte": "./src/index.js"
+    }
+  },
   "sideEffects": false,
   "scripts": {
     "prepack": "prettier --write 'src/*.svelte' && node build.js",
@@ -41,5 +46,8 @@
     "lib",
     "src",
     "types"
-  ]
+  ],
+  "engines": {
+    "node": ">=14"
+  }
 }
