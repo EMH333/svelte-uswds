@@ -3,16 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    %sapper.base%
     <link rel="icon" type="image/png" href="favicon.png" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/uswds/dist/css/uswds.min.css"
     />
-    %sapper.styles% %sapper.head%
+    %sveltekit.head%
   </head>
   <body>
-    <div id="sapper">%sapper.html%</div>
-    %sapper.scripts%
+    %sveltekit.body%
   </body>
 </html>

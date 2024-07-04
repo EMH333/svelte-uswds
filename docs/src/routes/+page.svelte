@@ -1,8 +1,8 @@
 <script>
   import { Grid, Prose, Link, Heading } from "svelte-uswds";
-  import HeaderTitle from "../components/HeaderTitle";
-  import Code from "../components/Code";
-  import Token from "../components/Token";
+  import HeaderTitle from "../components/HeaderTitle.svelte";
+  import Code from "../components/Code.svelte";
+  import Token from "../components/Token.svelte";
 
   const linkStylesheet = `<!-- App.svelte -->
 <svelte:head>

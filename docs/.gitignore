@@ -1,4 +1,4 @@
 .DS_Store
-/__sapper__
+/.svelte-kit
 /**/node_modules
 yarn-error.log

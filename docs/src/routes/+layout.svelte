@@ -163,6 +163,8 @@
 <SkipToMainContent href="{segment}#main-content" />
 
 {#if mobile}
+  <!-- svelte-ignore a11y-click-events-have-key-events -->
+  <!-- svelte-ignore a11y-no-static-element-interactions -->
   <div
     class="usa-overlay"
     class:is-visible="{visible}"

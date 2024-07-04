@@ -4,8 +4,10 @@
   import copy from "clipboard-copy";
   import { Button } from "svelte-uswds";
   import { onMount } from "svelte";
-  import { highlight, languages } from "prismjs";
+  import prism from "prismjs";
   import "prism-svelte";
+
+ const { highlight, languages } = prism;
 
   let copied = false;
   let timeout = undefined;

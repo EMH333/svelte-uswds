@@ -18,13 +18,13 @@
   <title>{status}</title>
 </svelte:head>
 <Grid>
-  <HeaderTitle subtitle="{error.message}">{status}</HeaderTitle>
+  <HeaderTitle subtitle="{error}">{status}</HeaderTitle>
   <p>
     Return to
     <Link href="/">home</Link>
     .
   </p>
-  {#if dev && error.stack}
+  {#if dev && error?.stack}
     <pre>{error.stack}</pre>
   {/if}
 </Grid>
