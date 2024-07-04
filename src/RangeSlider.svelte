@@ -76,7 +76,6 @@
       {disabled}
       {readonly}
       {required}
-      aria-required="{required}"
       {min}
       {max}
       {step}
@@ -96,7 +95,6 @@
     {disabled}
     {readonly}
     {required}
-    aria-required="{required}"
     {min}
     {max}
     {step}

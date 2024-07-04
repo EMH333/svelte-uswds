@@ -10,7 +10,7 @@
   "types": "./types/index.d.ts",
   "sideEffects": false,
   "scripts": {
-    "prepack": "prettier --write 'src/*.svelte' && rollup -c",
+    "prepack": "prettier --write 'src/*.svelte' && node build.js",
     "lint": "prettier --check --cache 'src/*.svelte'",
     "build": "node build.js"
   },

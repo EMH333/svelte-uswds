@@ -16,5 +16,5 @@
 </script>
 
 <a {...$$restProps} {href} class="usa-identifier__logo" on:click>
-  <img class="usa-identifier__logo-img" role="img" {src} {alt} />
+  <img class="usa-identifier__logo-img" {src} {alt} />
 </a>

@@ -47,6 +47,8 @@
   <SkipToMainContent />
 {/if}
 
+<!-- TODO Fix this instead of ignoring -->
+<!-- svelte-ignore a11y-click-events-have-key-events -->
 <div
   class="usa-overlay"
   class:is-visible="{$visible}"

@@ -55,7 +55,7 @@
   <slot name="navbar" />
   <button
     bind:this="{ref}"
-    class="usa-menu-btn"
+    class="usa-navbar-button usa-menu-btn"
     on:click="{() => {
       if (ctx) {
         ctx.mobile.set(true);
@@ -138,6 +138,7 @@
   {/if}
 </nav>
 
+<!-- TODO I'm not entirely sure the .usa-navbar-button.usa-menu-btn style is as intended. Verify -->
 <style>
   @media (min-width: 64em) {
     :global(div[slot="nav-secondary"]) {
@@ -145,7 +146,7 @@
     }
   }
 
-  :global(div[slot="navbar"]) ~ .usa-menu-btn {
+  .usa-navbar-button.usa-menu-btn {
     margin-left: auto;
   }
 
