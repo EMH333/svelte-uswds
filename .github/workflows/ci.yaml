@@ -22,12 +22,14 @@ jobs:
       - run: npm ci
 
       # now build (to prove no major errors)
-      - run: |
-        npm run lint
-        npm run build
+      - name: Build Library
+        run: |
+          npm run lint
+          npm run build
       
       # now build docs
-      - run: |
-        cd docs
-        npm ci
-        npm run build
+      - name: Build Docs
+        run: |
+          cd docs
+          npm ci
+          npm run build
