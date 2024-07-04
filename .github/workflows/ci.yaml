@@ -20,7 +20,14 @@ jobs:
 
       # Now install packages and lint
       - run: npm ci
-      - run: npm run lint
 
       # now build (to prove no major errors)
-      - run: npm run build
+      - run: |
+        npm run lint
+        npm run build
+      
+      # now build docs
+      - run: |
+        cd docs
+        npm ci
+        npm run build
