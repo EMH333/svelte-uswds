@@ -14,10 +14,11 @@
 </script>
 
 <script>
-  export let post;
+  /** @type {import('./$types').PageData} */
+	export let data;
 
   import * as registry from "./_components";
-  import HeaderTitle from "../../components/HeaderTitle.svelte";
+  import HeaderTitle from "../../../components/HeaderTitle.svelte";
   import { Grid } from "svelte-uswds";
   import { getContext, onMount } from "svelte";
 
@@ -29,16 +30,16 @@
     };
   });
 
-  $: if (post.slug) {
-    ctx.slug.set(post.slug);
+  $: if (data.slug) {
+    ctx.slug.set(data.slug);
   }
 </script>
 
 <svelte:head>
-  <title>{post.title} | Components</title>
+  <title>{data.title} | Components</title>
 </svelte:head>
 
 <Grid>
-  <HeaderTitle subtitle="Components">{post.title}</HeaderTitle>
-  <svelte:component this="{registry[post.title]}" />
+  <HeaderTitle subtitle="Components">{data.title}</HeaderTitle>
+  <svelte:component this="{registry[data.title]}" />
 </Grid>

@@ -1,7 +1,5 @@
 <script>
-  export let status;
-  export let error;
-
+  import { page } from '$app/stores';
   import { Link, Grid } from "svelte-uswds";
   import HeaderTitle from "../components/HeaderTitle.svelte";
 
@@ -15,16 +13,13 @@
 </style>
 
 <svelte:head>
-  <title>{status}</title>
+  <title>{$page.error.title}</title>
 </svelte:head>
 <Grid>
-  <HeaderTitle subtitle="{error}">{status}</HeaderTitle>
+  <HeaderTitle subtitle="{$page.error.title}">{$page.error.message}</HeaderTitle>
   <p>
     Return to
     <Link href="/">home</Link>
     .
   </p>
-  {#if dev && error?.stack}
-    <pre>{error.stack}</pre>
-  {/if}
 </Grid>

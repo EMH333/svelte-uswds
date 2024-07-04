@@ -4,7 +4,7 @@
   export let hideProps = false;
 
   import { Link, Heading } from "svelte-uswds";
-  import Code from "../../../components/Code.svelte";
+  import Code from "../../../../components/Code.svelte";
 </script>
 
 <p>

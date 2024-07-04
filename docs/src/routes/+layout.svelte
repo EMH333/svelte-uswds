@@ -12,7 +12,7 @@
     SideNavList,
     SideNavLink,
   } from "svelte-uswds";
-  import { nav_components } from "./components/_posts";
+  import { nav_components } from "./components/[slug]/_posts";
 
   let prevPath = undefined;
   let visible = false;
