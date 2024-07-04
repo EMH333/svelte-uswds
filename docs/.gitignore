@@ -1,4 +1,4 @@
 .DS_Store
 /.svelte-kit
 /**/node_modules
-yarn-error.log
+/build

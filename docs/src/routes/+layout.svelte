@@ -1,6 +1,4 @@
 <script>
-  export let segment = undefined;
-
   import { setContext, afterUpdate } from "svelte";
   import { writable } from "svelte/store";
   import {
@@ -19,10 +17,9 @@
   let mobile = false;
   let ref = null;
 
-  const path = writable(segment);
   const slug = writable(undefined);
 
-  setContext("Navigation", { path, slug });
+  setContext("Navigation", { slug });
 
   afterUpdate(() => {
     if (mobile && returnToTopHref !== prevPath) {
@@ -35,15 +32,12 @@
   $: if (ref) {
     mobile = ref.getBoundingClientRect().width !== 0;
   }
-  $: returnToTopHref = segment + "/";
+
+  let returnToTopHref;
   $: {
-    path.set(segment);
-
     if ($slug !== undefined) {
-      returnToTopHref = segment + "/" + $slug + "/";
-    }
-
-    if (segment === undefined && $slug === undefined) {
+      returnToTopHref = $slug + "/";
+    } else {
       returnToTopHref = "/";
     }
   }
@@ -160,7 +154,7 @@
   }}"
 />
 
-<SkipToMainContent href="{segment}#main-content" />
+<SkipToMainContent href="{returnToTopHref}#main-content" />
 
 {#if mobile}
   <!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -239,7 +233,7 @@
 <aside class:visible>
   <SideNav class="padding-2 margin-top-2">
     <SideNavList class="margin-bottom-4">
-      <SideNavLink href="/" text="Welcome" current="{segment === undefined}" />
+      <SideNavLink href="/" text="Welcome" current="{$slug === undefined}" />
     </SideNavList>
     <SideNavList class="margin-bottom-4">
       <h4 class="margin-2 margin-y-105 text-gray-70">Components</h4>
@@ -248,7 +242,7 @@
           rel="prefetch"
           href="/components/{component.toLowerCase()}/"
           text="{component}"
-          current="{segment === 'components' && $slug === component.toLowerCase()}"
+          current="{$slug === component.toLowerCase()}"
         />
       {/each}
     </SideNavList>
