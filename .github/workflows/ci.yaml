@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 jobs:
-  lint:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -17,13 +17,14 @@ jobs:
         with:
           node-version: 20
           cache: "npm"
-
-      # Now install packages and lint
-      - run: npm ci
+          cache-dependency-path: |
+            package-lock.json
+            docs/package-lock.json
 
       # now build (to prove no major errors)
       - name: Build Library
         run: |
+          npm ci
           npm run lint
           npm run build
       
